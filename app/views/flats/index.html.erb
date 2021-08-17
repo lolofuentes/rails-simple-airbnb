@@ -1,0 +1,8 @@
+<%= link_to 'New Flats', new_flat_path(@flat), class: "btn btn-primary" %>
+<h2> List off flats </h2>
+<ul>
+  <% @flats.each do |flat| %>
+    <li><%= link_to flat.name, flat_path(flat) %></li> 
+    <p> City: <%= flat.address %></p>
+  <% end %>
+</ul>
